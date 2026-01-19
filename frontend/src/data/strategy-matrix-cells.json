@@ -1,0 +1,80 @@
+[
+  [
+    {
+      "id": "protect-position",
+      "title": "Protect Position",
+      "description": "Invest to grow at the maximum rate possible while defending core advantages.",
+      "icon": "Shield",
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "invest-to-build",
+      "title": "Invest to Build",
+      "description": "Challenge for leadership by reinforcing strong advantages and funding expansion.",
+      "icon": "TrendingUp",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "build-selectively-top",
+      "title": "Build Selectively",
+      "description": "Specialize around limited strengths and exit areas lacking momentum.",
+      "icon": "Hammer",
+      "row": 0,
+      "col": 2
+    }
+  ],
+  [
+    {
+      "id": "build-selectively-mid",
+      "title": "Build Selectively",
+      "description": "Concentrate investment in segments with clear upside while monitoring risk.",
+      "icon": "Wrench",
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": "manage-for-earnings-mid",
+      "title": "Manage for Earnings",
+      "description": "Protect existing programs, optimize profitability, and reinforce promising bets.",
+      "icon": "BarChart3",
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "expand-or-harvest",
+      "title": "Expand or Harvest",
+      "description": "Expand into adjacencies without high risk; otherwise streamline and harvest.",
+      "icon": "Factory",
+      "row": 1,
+      "col": 2
+    }
+  ],
+  [
+    {
+      "id": "protect-position-refocus",
+      "title": "Protect Position and Refocus",
+      "description": "Manage for current earnings, defend moats, and refocus on resilient segments.",
+      "icon": "ShieldCheck",
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": "manage-for-earnings-low",
+      "title": "Manage for Earnings",
+      "description": "Optimize cash flows, upgrade core offerings, and minimize additional investment.",
+      "icon": "PiggyBank",
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": "divest",
+      "title": "Divest",
+      "description": "Exit segments where upside is limited and reallocate capital toward growth.",
+      "icon": "Scissors",
+      "row": 2,
+      "col": 2
+    }
+  ]
+]

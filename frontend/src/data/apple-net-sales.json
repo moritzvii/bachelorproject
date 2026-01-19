@@ -1,0 +1,68 @@
+{
+  "products": {
+    "units": "million_usd",
+    "segments": [
+      "iPhone",
+      "Mac",
+      "iPad",
+      "Wearables, Home & Accessories",
+      "Services"
+    ],
+    "millions": {
+      "2025": {
+        "iPhone": 209586,
+        "Mac": 33708,
+        "iPad": 28023,
+        "Wearables, Home & Accessories": 35686,
+        "Services": 109158
+      },
+      "2024": {
+        "iPhone": 201183,
+        "Mac": 29984,
+        "iPad": 26694,
+        "Wearables, Home & Accessories": 37005,
+        "Services": 96169
+      },
+      "2023": {
+        "iPhone": 200583,
+        "Mac": 29357,
+        "iPad": 28300,
+        "Wearables, Home & Accessories": 39845,
+        "Services": 85200
+      }
+    }
+  },
+  "regions": {
+    "units": "million_usd",
+    "segments": [
+      "Americas",
+      "Europe",
+      "Greater China",
+      "Japan",
+      "Rest of Asia Pacific"
+    ],
+    "millions": {
+      "2025": {
+        "Americas": 178353,
+        "Europe": 111032,
+        "Greater China": 64377,
+        "Japan": 28703 ,
+        "Rest of Asia Pacific": 33696
+      },
+      "2024": {
+        "Americas": 167045,
+        "Europe": 101328,
+        "Greater China": 66952,
+        "Japan": 25052,
+        "Rest of Asia Pacific": 30658
+      },
+      "2023": {
+        "Americas": 162560,
+        "Europe": 94294 ,
+        "Greater China": 72559,
+        "Japan": 24257,
+        "Rest of Asia Pacific": 29615
+      }
+    }
+  }
+}

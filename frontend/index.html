@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moritz von Büren | Hybrid Intelligence Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      ;(() => {
+        const storageKey = "app-theme"
+        const storedTheme = window.localStorage.getItem(storageKey)
+        const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)")
+        const systemTheme = prefersDark?.matches ? "dark" : "light"
+        const theme =
+          storedTheme === "light" || storedTheme === "dark"
+            ? storedTheme
+            : storedTheme === "system" || storedTheme == null
+              ? systemTheme
+              : "light"
+        document.documentElement.classList.toggle("dark", theme === "dark")
+        document.documentElement.style.colorScheme = theme
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

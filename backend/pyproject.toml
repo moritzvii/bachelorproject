@@ -1,0 +1,62 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "HI-DSS RAG Backend (FastAPI)"
+readme = "README.md"
+authors = [
+    { name = "mbueren", email = "mbueren@uni-potsdam.de" },
+]
+requires-python = ">=3.12,<4.0"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+
+fastapi = ">=0.116.0,<0.117.0"
+uvicorn = { extras = ["standard"], version = ">=0.30.0,<0.31.0" }
+pydantic = ">=2"
+pydantic-settings = ">=2.6.0,<3.0.0"
+python-dotenv = ">=1.0.0,<2.0.0"
+
+pandas = ">=2.2.0,<3.0.0"
+pyarrow = ">=17.0.0,<18.0.0"
+openpyxl = ">=3.1.0,<4.0.0"
+
+openai = "^2.13.0"
+numpy = ">=2.3.4,<3.0.0"
+pydub = "^0.25.1"
+
+[project.scripts]
+serve = "app.__main__:run"
+reports = "app.scripts.forecast_reports.cli:main"
+
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = "HI-DSS RAG Backend (FastAPI)"
+authors = ["mbueren <mbueren@uni-potsdam.de>"]
+package-mode = false
+
+[tool.poetry.group.local-embed]
+optional = true
+
+[tool.poetry.group.local-embed.dependencies]
+torch = ">=2.6,<3"
+faiss-cpu = ">=1.8.0,<2.0.0"
+transformers = ">=4.57.1,<5.0.0"
+
+[tool.poetry.group.ingest]
+optional = true
+
+[tool.poetry.group.ingest.dependencies]
+beautifulsoup4 = "^4.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3"
+pytest-cov = "^5.0"
+ruff = "^0.6"
+black = "^24.8"
+mypy = "^1.13"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
