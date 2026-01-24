@@ -38,8 +38,8 @@ The system pairs a multi-step frontend workflow with a FastAPI backend that mana
 - [![TypeScript][TypeScript-badge]][TypeScript-url]
 - [![Tailwind][Tailwind-badge]][Tailwind-url]
 - [![Radix][Radix-badge]][Radix-url]
-- <a href="https://shadcn.io/" style="text-decoration: none; display: inline-block; padding: 4px 0;"><span style="display: inline-flex; align-items: center; height: 28px; border-radius: 0; overflow: hidden; font-size: 11px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; font-family: Verdana, 'DejaVu Sans', Arial, sans-serif; box-sizing: border-box;"><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 8px; background: #fff; color: #000;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #fff; border-radius: 0;"><img src="frontend/public/img_1.png" alt="Logo" height="12" style="display: block;" /></span>Component Library</span><span style="display: inline-flex; align-items: center; height: 28px; padding: 0 10px; background: #000; color: #fff; font-weight: 700;">shadcn/ui</span></span></a>
-- <a href="https://www.shadcn.io/" style="text-decoration: none; display: inline-block; padding: 4px 0;"><span style="display: inline-flex; align-items: center; height: 28px; border-radius: 0; overflow: hidden; font-size: 11px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; font-family: Verdana, 'DejaVu Sans', Arial, sans-serif; box-sizing: border-box;"><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 8px; background: #fff; color: #000;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #000; border-radius: 0;"><img src="frontend/public/img_2.png" alt="Logo" height="12" style="display: block;" /></span>Component Library</span><span style="display: inline-flex; align-items: center; height: 28px; padding: 0 10px; background: #000; color: #fff; font-weight: 700;">shadcn.io</span></span></a>
+- [![shadcn/ui][ShadcnUi-badge]][ShadcnUi-url]
+- [![shadcn.io][ShadcnIo-badge]][ShadcnIo-url]
 - [![Lucide][Lucide-badge]][Lucide-url]
 - [![Recharts][Recharts-badge]][Recharts-url]
 - [![PDFjs][PDFjs-badge]][PDFjs-url]
@@ -55,7 +55,7 @@ The system pairs a multi-step frontend workflow with a FastAPI backend that mana
 - [![PyTorch][PyTorch-badge]][PyTorch-url]
 - [![Transformers][Transformers-badge]][Transformers-url]
 - [![NLI Model][NLI-badge]][NLI-url]
-- <a href="https://platform.openai.com/" style="text-decoration: none;"><span style="display: inline-flex; align-items: center; height: 28px; border-radius: 0; overflow: hidden; font-size: 11px; font-weight: 500; letter-spacing: 0.4px; text-transform: uppercase; font-family: Verdana, 'DejaVu Sans', Arial, sans-serif; box-sizing: border-box;"><span style="display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 8px; background: #fff; color: #000;"><span style="display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #fff; border-radius: 0;"><img src="frontend/public/img.png" alt="Logo" height="12" style="display: block;" /></span>Embedding Model</span><span style="display: inline-flex; align-items: center; height: 28px; padding: 0 10px; background: #10a37f; color: #fff; font-weight: 700;">text-embedding-3-small</span></span></a>
+- [![Embedding Model][OpenAIEmbedding-badge]][OpenAIEmbedding-url]
 
 ## Workflow screenshots
 
@@ -140,42 +140,42 @@ Each top-level folder represents a system responsibility.
 
 #### Workflow view
 
-<pre style="font-family: Consolas, Menlo, Monaco, 'Courier New', monospace; line-height: 1.35;">
+```text
 +====================================================================+
-||......................:: <span style="color:#9ECE6A;">1-Strategic Plan</span> ::......................||
+||......................:: 1-Strategic Plan ::......................||
 ||                                                                  ||
-||                        <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">strategic-plan.tsx</span>                        ||
-||                                                                  ||
-+====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
-+====================================================================+
-||....................:: <span style="color:#BB9AF7;">2-Evidence Selection</span> ::....................||
-||                                                                  ||
-||     <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">evidence-selection-loading.tsx</span> &rarr; <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">evidence-selection.tsx</span>      ||
+||                        strategic-plan.tsx                        ||
 ||                                                                  ||
 +====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
+                                   v
 +====================================================================+
-||....................:: <span style="color:#7DCFFF;">3-Evidence Reasoning</span> ::....................||
+||....................:: 2-Evidence Selection ::....................||
 ||                                                                  ||
-||                      <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">evidence-reasoning.tsx</span>                      ||
-||                                                                  ||
-+====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
-+====================================================================+
-||...................:: <span style="color:#2AC3DE;">4-Evidence Positioning</span> ::...................||
-||                                                                  ||
-||   <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">evidence-positioning-loading.tsx</span> &rarr; <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">evidence-positioning.tsx</span>    ||
+||     evidence-selection-loading.tsx -> evidence-selection.tsx      ||
 ||                                                                  ||
 +====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
+                                   v
 +====================================================================+
-||.................:: <span style="color:#FF9E64;">5-Recommendation Dashboard</span> ::.................||
+||....................:: 3-Evidence Reasoning ::....................||
 ||                                                                  ||
-||                   <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">recommendation-dashboard.tsx</span>                   ||
+||                      evidence-reasoning.tsx                      ||
 ||                                                                  ||
 +====================================================================+
-</pre>
+                                   v
++====================================================================+
+||...................:: 4-Evidence Positioning ::...................||
+||                                                                  ||
+||   evidence-positioning-loading.tsx -> evidence-positioning.tsx    ||
+||                                                                  ||
++====================================================================+
+                                   v
++====================================================================+
+||.................:: 5-Recommendation Dashboard ::.................||
+||                                                                  ||
+||                   recommendation-dashboard.tsx                   ||
+||                                                                  ||
++====================================================================+
+```
 
 ### API
 
@@ -238,67 +238,67 @@ Each top-level folder represents a system responsibility.
 
 #### Stages view
 
-<pre style="font-family: Consolas, Menlo, Monaco, 'Courier New', monospace; line-height: 1.35;">
+```text
 +====================================================================+
-||..................:: <span style="color:#FFD866;">Preprocessing artifacts</span> ::...................||
+||..................:: Preprocessing artifacts ::...................||
 +====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
+                                   v
 +====================================================================+
-||........................:: <span style="color:#7AA2F7;">2-Hypothesen</span> ::........................||
+||........................:: 2-Hypothesen ::........................||
 ||                                                                  ||
-||                      <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">strategy_hypotheses.py</span>                      ||
-||                                                                  ||
-+====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
-+====================================================================+
-||........................:: <span style="color:#9ECE6A;">3-Embeddings</span> ::........................||
-||                                                                  ||
-||                 <span style="background-color: rgba(61,90,254,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(61,90,254,0.25); display: inline-block; color:#A9B1D6; font-weight:600;">forecast-reports</span> | <span style="background-color: rgba(61,90,254,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(61,90,254,0.25); display: inline-block; color:#A9B1D6; font-weight:600;">risk-reports</span>                  ||
+||                      strategy_hypotheses.py                      ||
 ||                                                                  ||
 +====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
+                                   v
 +====================================================================+
-||.......................:: <span style="color:#BB9AF7;">4-PremisePairs</span> ::.......................||
+||........................:: 3-Embeddings ::........................||
 ||                                                                  ||
-||                 <span style="background-color: rgba(61,90,254,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(61,90,254,0.25); display: inline-block; color:#A9B1D6; font-weight:600;">forecast-reports</span> | <span style="background-color: rgba(61,90,254,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(61,90,254,0.25); display: inline-block; color:#A9B1D6; font-weight:600;">risk-reports</span>                  ||
-||                                                                  ||
-+====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
-+====================================================================+
-||.........................:: <span style="color:#ff002b;">5-Reports</span> ::..........................||
-||                                                                  ||
-||                          <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">merge_pairs.py</span>                          ||
+||                 forecast-reports | risk-reports                  ||
 ||                                                                  ||
 +====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
+                                   v
 +====================================================================+
-||........................:: <span style="color:#7DCFFF;">6-UserReview</span> ::........................||
+||.......................:: 4-PremisePairs ::.......................||
 ||                                                                  ||
-||                        <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">add_user_status.py</span>                        ||
-||                                                                  ||
-+====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
-+====================================================================+
-||.........................:: <span style="color:#2AC3DE;">7-Scoring</span> ::..........................||
-||                                                                  ||
-||                 <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">score_summary.py</span> | <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">intervall.py</span>                  ||
+||                 forecast-reports | risk-reports                  ||
 ||                                                                  ||
 +====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
+                                   v
 +====================================================================+
-||.....................:: <span style="color:#FF9E64;">8-HumanKalibration</span> ::.....................||
+||.........................:: 5-Reports ::..........................||
 ||                                                                  ||
-||                       <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">human_calibration.py</span>                       ||
-||                                                                  ||
-+====================================================================+
-                                   <span style="font-size: 2em; line-height: 1; display: inline-block;">&darr;</span>
-+====================================================================+
-||.........................:: <span style="color:#C3E88D;">9-Strategy</span> ::.........................||
-||                                                                  ||
-||                     <span style="background-color: rgba(110,118,129,0.25); border-radius: 4px; box-shadow: 0 0 0 3px rgba(110,118,129,0.25); display: inline-block; color:#E6EDF3;">compute_distribution.py</span>                      ||
+||                          merge_pairs.py                          ||
 ||                                                                  ||
 +====================================================================+
-</pre>
+                                   v
++====================================================================+
+||........................:: 6-UserReview ::........................||
+||                                                                  ||
+||                        add_user_status.py                        ||
+||                                                                  ||
++====================================================================+
+                                   v
++====================================================================+
+||.........................:: 7-Scoring ::..........................||
+||                                                                  ||
+||                 score_summary.py | intervall.py                  ||
+||                                                                  ||
++====================================================================+
+                                   v
++====================================================================+
+||.....................:: 8-HumanKalibration ::.....................||
+||                                                                  ||
+||                       human_calibration.py                       ||
+||                                                                  ||
++====================================================================+
+                                   v
++====================================================================+
+||.........................:: 9-Strategy ::.........................||
+||                                                                  ||
+||                     compute_distribution.py                      ||
+||                                                                  ||
++====================================================================+
+```
 
 ### Responsibilities
 
@@ -355,6 +355,10 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [Tailwind-url]: https://tailwindcss.com/
 [Radix-badge]: https://img.shields.io/badge/Radix%20UI-161618?style=for-the-badge&logo=radixui&logoColor=white
 [Radix-url]: https://www.radix-ui.com/
+[ShadcnUi-badge]: https://img.shields.io/badge/Component%20Library-shadcn%2Fui-000000?style=for-the-badge&labelColor=FFFFFF
+[ShadcnUi-url]: https://shadcn.io/
+[ShadcnIo-badge]: https://img.shields.io/badge/Component%20Library-shadcn.io-000000?style=for-the-badge&labelColor=FFFFFF
+[ShadcnIo-url]: https://www.shadcn.io/
 [Recharts-badge]: https://img.shields.io/badge/Recharts-22C55E?style=for-the-badge
 [Recharts-url]: https://recharts.org/en-US/
 [PDFjs-badge]: https://img.shields.io/badge/PDF.js-FF5722?style=for-the-badge&logo=adobeacrobatreader&logoColor=white
@@ -379,3 +383,5 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [Pandas-url]: https://pandas.pydata.org/
 [NLI-badge]: https://img.shields.io/badge/NLI%20Model-microsoft%2Fdeberta--large--mnli-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000000&labelColor=FFFFFF
 [NLI-url]: https://huggingface.co/microsoft/deberta-large-mnli
+[OpenAIEmbedding-badge]: https://img.shields.io/badge/Embedding%20Model-text--embedding--3--small-10A37F?style=for-the-badge&labelColor=FFFFFF
+[OpenAIEmbedding-url]: https://platform.openai.com/
