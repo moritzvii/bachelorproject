@@ -2,11 +2,14 @@
 <br />
 <div align="center">
   <img src="frontend/public/vite.svg" alt="Logo" width="80" height="80">
-  <h1 align="center">HI Decision Support</h1>
+  <h1 align="center">Development of a Hybrid Intelligence Decision Support System for Strategic Planning Support</h1>
+  <a href="https://hybridintelligence.dev/">
+    <img src="assets/hybridintelligence-pill.svg" alt="hybridintelligence.dev">
+  </a>
   <p align="center">
-    Hybrid Intelligence Decision Support system.
+    Hybrid Intelligence Decision Support System for evidence-based strategic planning under information overload and uncertain signals.
     <br />
-    React workflow frontend with a FastAPI backend for evidence scoring and NLI stages.
+    It evaluates strategic plans against a transparent, traceable evidence base, integrates human strategic judgment throughout the workflow, and prepares results for strategic assessment.
   </p>
 </div>
 
@@ -15,6 +18,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#technical-innovation">Technical innovation</a></li>
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#workflow-screenshots">Workflow screenshots</a></li>
     <li><a href="#frontend">Frontend</a></li>
@@ -28,6 +32,20 @@
 ## Overview
 
 The system pairs a multi-step frontend workflow with a FastAPI backend that manages strategy stages, evidence scoring, and NLI outputs.
+
+## Technical innovation
+
+**Design Objectives (Hevner et al., 2004)**
+
+![1][Tech-01] ![Extends strategic instrument with HI][Tech-01-Text]
+
+![2][Tech-02] ![Hybrid reasoning with clear roles][Tech-02-Text]
+
+![3][Tech-03] ![Multi dimensional assessment signals][Tech-03-Text]
+
+![4][Tech-04] ![Traceable approval gated evidence][Tech-04-Text]
+
+![5][Tech-05] ![Hybrid uncertainty visualization][Tech-05-Text]
 
 ## Built With
 
@@ -356,9 +374,19 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [Radix-badge]: https://img.shields.io/badge/Radix%20UI-161618?style=for-the-badge&logo=radixui&logoColor=white
 [Radix-url]: https://www.radix-ui.com/
 [ShadcnUi-badge]: https://img.shields.io/badge/Component%20Library-shadcn%2Fui-000000?style=for-the-badge&labelColor=FFFFFF
-[ShadcnUi-url]: https://shadcn.io/
+[ShadcnUi-url]: https://ui.shadcn.com/
 [ShadcnIo-badge]: https://img.shields.io/badge/Component%20Library-shadcn.io-000000?style=for-the-badge&labelColor=FFFFFF
 [ShadcnIo-url]: https://www.shadcn.io/
+[Tech-01]: https://img.shields.io/badge/-%F0%9D%9F%8F-111111?style=flat
+[Tech-01-Text]: https://img.shields.io/badge/-Extends%20a%20strategic%20management%20instrument%20with%20Hybrid%20Intelligence%20beyond%20domain%20specific%20decision%20contexts-F5F5F7?style=flat
+[Tech-02]: https://img.shields.io/badge/-%F0%9D%9F%90-111111?style=flat
+[Tech-02-Text]: https://img.shields.io/badge/-Hybrid%20Intelligence%20architecture%20merges%20semantic%20evidence%20reasoning%20and%20human%20judgment%20with%20clear%20role%20separation-F5F5F7?style=flat
+[Tech-03]: https://img.shields.io/badge/-%F0%9D%9F%91-111111?style=flat
+[Tech-03-Text]: https://img.shields.io/badge/-Multi%20dimensional%20strategy%20assessment%20operationalizes%20semantic%20ratings%20as%20support%20or%20contradiction%20signals-F5F5F7?style=flat
+[Tech-04]: https://img.shields.io/badge/-%F0%9D%9F%92-111111?style=flat
+[Tech-04-Text]: https://img.shields.io/badge/-Traceable%20approval%20gated%20evidence%20only%20source%20bound%20citable%20passages%20enter%20decision%20support-F5F5F7?style=flat
+[Tech-05]: https://img.shields.io/badge/-%F0%9D%9F%93-111111?style=flat
+[Tech-05-Text]: https://img.shields.io/badge/-Hybrid%20uncertainty%20visualization%20shows%20interval%20based%20evidence%20ratings%20and%20uncertainty%20aware%20strategy%20derivation-F5F5F7?style=flat
 [Recharts-badge]: https://img.shields.io/badge/Recharts-22C55E?style=for-the-badge
 [Recharts-url]: https://recharts.org/en-US/
 [PDFjs-badge]: https://img.shields.io/badge/PDF.js-FF5722?style=for-the-badge&logo=adobeacrobatreader&logoColor=white
