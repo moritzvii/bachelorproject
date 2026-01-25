@@ -19,7 +19,12 @@
   <ol>
     <li><a href="#overview">Overview</a></li>
     <li><a href="#technical-innovation">Technical innovation</a></li>
-    <li><a href="#built-with">Built With</a></li>
+    <li>
+      <a href="#built-with">Built With</a>
+      <ul>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </li>
     <li><a href="#workflow-screenshots">Workflow screenshots</a></li>
     <li><a href="#frontend">Frontend</a></li>
     <li><a href="#backend">Backend</a></li>
@@ -35,7 +40,7 @@ The system pairs a multi-step frontend workflow with a FastAPI backend that mana
 
 ## Technical innovation
 
-**Design Objectives (Hevner et al., 2004)**
+**Solution Objectives (Hevner et al., 2004)**
 
 ![1][Tech-01] ![Extends strategic instrument with HI][Tech-01-Text]
 
@@ -51,29 +56,35 @@ The system pairs a multi-step frontend workflow with a FastAPI backend that mana
 
 ### Frontend
 
-- [![React][React-badge]][React-url]
-- [![Vite][Vite-badge]][Vite-url]
-- [![TypeScript][TypeScript-badge]][TypeScript-url]
-- [![Tailwind][Tailwind-badge]][Tailwind-url]
-- [![Radix][Radix-badge]][Radix-url]
-- [![shadcn/ui][ShadcnUi-badge]][ShadcnUi-url]
-- [![shadcn.io][ShadcnIo-badge]][ShadcnIo-url]
-- [![Lucide][Lucide-badge]][Lucide-url]
-- [![Recharts][Recharts-badge]][Recharts-url]
-- [![PDFjs][PDFjs-badge]][PDFjs-url]
-- [![ReactRouter][ReactRouter-badge]][ReactRouter-url]
+[![React][React-badge]][React-url]
+[![Vite][Vite-badge]][Vite-url]
+[![TypeScript][TypeScript-badge]][TypeScript-url]
+[![Tailwind][Tailwind-badge]][Tailwind-url]
+[![Radix][Radix-badge]][Radix-url]
+[![shadcn/ui][ShadcnUi-badge]][ShadcnUi-url]
+[![shadcn.io][ShadcnIo-badge]][ShadcnIo-url]
+[![Lucide][Lucide-badge]][Lucide-url]
+[![Recharts][Recharts-badge]][Recharts-url]
+[![PDFjs][PDFjs-badge]][PDFjs-url]
+[![ReactRouter][ReactRouter-badge]][ReactRouter-url]
 
 ### Backend
 
-- [![Python][Python-badge]][Python-url]
-- [![FastAPI][FastAPI-badge]][FastAPI-url]
-- [![FAISS][FAISS-badge]][FAISS-url]
-- [![NumPy][NumPy-badge]][NumPy-url]
-- [![Pandas][Pandas-badge]][Pandas-url]
-- [![PyTorch][PyTorch-badge]][PyTorch-url]
-- [![Transformers][Transformers-badge]][Transformers-url]
-- [![NLI Model][NLI-badge]][NLI-url]
-- [![Embedding Model][OpenAIEmbedding-badge]][OpenAIEmbedding-url]
+[![Python][Python-badge]][Python-url]
+[![FastAPI][FastAPI-badge]][FastAPI-url]
+[![FAISS][FAISS-badge]][FAISS-url]
+[![NumPy][NumPy-badge]][NumPy-url]
+[![Pandas][Pandas-badge]][Pandas-url]
+[![PyTorch][PyTorch-badge]][PyTorch-url]
+[![Transformers][Transformers-badge]][Transformers-url]
+[![NLI Model][NLI-badge]][NLI-url]
+[![Embedding Model][Embedding-badge]][Embedding-url]
+
+### Deployment
+
+[![Docker][Docker-badge]][Docker-url]
+[![Fly.io][Fly-badge]][Fly-url]
+[![Vercel][Vercel-badge]][Vercel-url]
 
 ## Workflow screenshots
 
@@ -373,7 +384,7 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [Tailwind-url]: https://tailwindcss.com/
 [Radix-badge]: https://img.shields.io/badge/Radix%20UI-161618?style=for-the-badge&logo=radixui&logoColor=white
 [Radix-url]: https://www.radix-ui.com/
-[ShadcnUi-badge]: https://img.shields.io/badge/Component%20Library-shadcn%2Fui-000000?style=for-the-badge&labelColor=FFFFFF
+[ShadcnUi-badge]: https://img.shields.io/badge/-shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=FFFFFF
 [ShadcnUi-url]: https://ui.shadcn.com/
 [ShadcnIo-badge]: https://img.shields.io/badge/Component%20Library-shadcn.io-000000?style=for-the-badge&labelColor=FFFFFF
 [ShadcnIo-url]: https://www.shadcn.io/
@@ -387,9 +398,9 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [Tech-04-Text]: https://img.shields.io/badge/-Traceable%20approval%20gated%20evidence%20only%20source%20bound%20citable%20passages%20enter%20decision%20support-F5F5F7?style=flat
 [Tech-05]: https://img.shields.io/badge/-%F0%9D%9F%93-111111?style=flat
 [Tech-05-Text]: https://img.shields.io/badge/-Hybrid%20uncertainty%20visualization%20shows%20interval%20based%20evidence%20ratings%20and%20uncertainty%20aware%20strategy%20derivation-F5F5F7?style=flat
-[Recharts-badge]: https://img.shields.io/badge/Recharts-22C55E?style=for-the-badge
+[Recharts-badge]: https://img.shields.io/badge/Recharts-22C55E?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nI2ZmZic%2BPHBhdGggZD0nTTQgMTloMTZ2MkgyVjRoMnYxNXptNC03aDJ2Nkg4di02em01LTVoMnYxMWgtMlY3em01IDNoMnY4aC0ydi04eicvPjwvc3ZnPg%3D%3D
 [Recharts-url]: https://recharts.org/en-US/
-[PDFjs-badge]: https://img.shields.io/badge/PDF.js-FF5722?style=for-the-badge&logo=adobeacrobatreader&logoColor=white
+[PDFjs-badge]: https://img.shields.io/badge/PDF.js-FF5722?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nI2ZmZic%2BPHBhdGggZD0nTTYgMmg5bDUgNXYxNWEyIDIgMCAwIDEtMiAySDZhMiAyIDAgMCAxLTItMlY0YTIgMiAwIDAgMSAyLTJ6bTggMS41VjhoNC41TDE0IDMuNXonLz48L3N2Zz4%3D
 [PDFjs-url]: https://mozilla.github.io/pdf.js/
 [ReactRouter-badge]: https://img.shields.io/badge/React%20Router-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white
 [ReactRouter-url]: https://reactrouter.com/
@@ -411,5 +422,11 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [Pandas-url]: https://pandas.pydata.org/
 [NLI-badge]: https://img.shields.io/badge/NLI%20Model-microsoft%2Fdeberta--large--mnli-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000000&labelColor=FFFFFF
 [NLI-url]: https://huggingface.co/microsoft/deberta-large-mnli
-[OpenAIEmbedding-badge]: https://img.shields.io/badge/Embedding%20Model-text--embedding--3--small-10A37F?style=for-the-badge&labelColor=FFFFFF
-[OpenAIEmbedding-url]: https://platform.openai.com/
+[Embedding-badge]: https://img.shields.io/badge/Embedding%20Model-text--embedding--3--large-10A37F?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nI2ZmZic%2BCiAgPGNpcmNsZSBjeD0nNicgY3k9JzEyJyByPScyJy8%2BCiAgPGNpcmNsZSBjeD0nMTInIGN5PSc2JyByPScyJy8%2BCiAgPGNpcmNsZSBjeD0nMTgnIGN5PScxMicgcj0nMicvPgogIDxjaXJjbGUgY3g9JzEyJyBjeT0nMTgnIHI9JzInLz4KICA8cGF0aCBkPSdNNy42IDExLjJsMi44LTMuNG0zLjIgMGwyLjggMy40bTAgMS42bC0yLjggMy40bS0zLjIgMGwtMi44LTMuNCcgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIGZpbGw9J25vbmUnIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcvPgo8L3N2Zz4%3D
+[Embedding-url]: https://platform.openai.com/docs/models/text-embedding-3-large
+[Docker-badge]: https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
+[Fly-badge]: https://img.shields.io/badge/Fly.io-7B4FFF?style=for-the-badge&logo=flydotio&logoColor=white
+[Fly-url]: https://fly.io/
+[Vercel-badge]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
+[Vercel-url]: https://vercel.com/
