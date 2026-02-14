@@ -25,8 +25,8 @@
         <li><a href="#deployment">Deployment</a></li>
       </ul>
     </li>
-    <li><a href="#workflow-screenshots">Workflow screenshots</a></li>
     <li><a href="#injecting-the-hybrid-intelligence-into-the-ge-mckinsey-matrix">Injecting the hybrid intelligence into the GE-McKinsey matrix</a></li>
+    <li><a href="#workflow-screenshots">Workflow screenshots</a></li>
     <li><a href="#frontend">Frontend</a></li>
     <li><a href="#backend">Backend</a></li>
     <li><a href="#additional-docs">Additional docs</a></li>
@@ -87,51 +87,13 @@ The system pairs a multi-step frontend workflow with a FastAPI backend that mana
 [![Fly.io][Fly-badge]][Fly-url]
 [![Vercel][Vercel-badge]][Vercel-url]
 
-## Workflow screenshots
-
-### Step 1 - Strategic Plan
-
-Define the strategic intent, segment, and region, or select a predefined plan.
-
-![Strategic Plan](frontend/public/screenshots/1.png)
-
-### Step 2 - Evidence Selection
-
-Curate the knowledgebase by including or excluding evidence, with score guidance.
-
-![Evidence Selection](frontend/public/screenshots/2.png)
-
-### Step 3 - Evidence Reasoning
-
-Adjust alignment and stability sliders to reflect the evidence signal.
-
-![Evidence Reasoning](frontend/public/screenshots/3.png)
-
-### Step 4 - Evidence Positioning
-
-Place evidence in the GE-McKinsey matrix and refine the final position.
-
-![Evidence Positioning](frontend/public/screenshots/4.png)
-
-### Step 5 - Recommendation Dashboard
-
-Review strategic insights and the evidence foundation behind the recommendation.
-
-![Recommendation Dashboard](frontend/public/screenshots/5.png)
-
-### Feature detail
-
-Source document viewer for evidence traceability and report inspection.
-
-![Source Document Viewer](frontend/public/screenshots/6.png)
-
-## Injecting the hybrid intelligence into the GE-McKinsey matrix
+## Injecting Hybrid Intelligence into the GE-McKinsey Matrix: A Data-Driven Decision Support Extension
 
 ![Syringe icon][Syringe-icon]
 
 ![Figure 10 - Derivation of uncertainty intervals](frontend/public/screenshots/hybrid-ge-mckinsey-matrix.png)
 
-### Scoring Logic (Implementation of the Architecture Principles)
+### Scoring Logic (Implementation of the Solution Objectives)
 
 The following part is intentionally reduced to the conceptual structure and core stages. Detailed technical implementation and parameterization are documented in the project folder.
 
@@ -200,6 +162,44 @@ The following part is intentionally reduced to the conceptual structure and core
    </picture>
 
    The final output is a percentage-based **Strategy Distribution** across all matrix cells.
+
+## Workflow screenshots
+
+### Step 1 - Strategic Plan
+
+Define the strategic intent, segment, and region, or select a predefined plan.
+
+![Strategic Plan](frontend/public/screenshots/1.png)
+
+### Step 2 - Evidence Selection
+
+Curate the knowledgebase by including or excluding evidence, with score guidance.
+
+![Evidence Selection](frontend/public/screenshots/2.png)
+
+### Step 3 - Evidence Reasoning
+
+Adjust alignment and stability sliders to reflect the evidence signal.
+
+![Evidence Reasoning](frontend/public/screenshots/3.png)
+
+### Step 4 - Evidence Positioning
+
+Place evidence in the GE-McKinsey matrix and refine the final position.
+
+![Evidence Positioning](frontend/public/screenshots/4.png)
+
+### Step 5 - Recommendation Dashboard
+
+Review strategic insights and the evidence foundation behind the recommendation.
+
+![Recommendation Dashboard](frontend/public/screenshots/5.png)
+
+### Feature detail
+
+Source document viewer for evidence traceability and report inspection.
+
+![Source Document Viewer](frontend/public/screenshots/6.png)
 
 ## Frontend
 
@@ -465,7 +465,7 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [ShadcnUi-url]: https://ui.shadcn.com/
 [ShadcnIo-badge]: https://img.shields.io/badge/Component%20Library-shadcn.io-000000?style=for-the-badge&labelColor=FFFFFF
 [ShadcnIo-url]: https://www.shadcn.io/
-[Syringe-icon]: https://img.shields.io/static/v1?label=&message=&color=111111&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc%2BPHBhdGggZD0nTTE0IDRsNiA2Jy8%2BPHBhdGggZD0nTTE3IDJsNCA0Jy8%2BPHBhdGggZD0nTTMgMjFsNC0xIDExLTExLTMtM0w0IDE3IDMgMjF6Jy8%2BPHBhdGggZD0nTTEwIDEwbDQgNCcvPjxwYXRoIGQ9J00xOSA5bDEgMScvPjwvc3ZnPg%3D%3D&logoColor=white
+[Syringe-icon]: https://img.shields.io/static/v1?label=&message=%20&color=111111&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc%2BPHBhdGggZD0nTTE0IDRsNiA2Jy8%2BPHBhdGggZD0nTTE3IDJsNCA0Jy8%2BPHBhdGggZD0nTTMgMjFsNC0xIDExLTExLTMtM0w0IDE3IDMgMjF6Jy8%2BPHBhdGggZD0nTTEwIDEwbDQgNCcvPjxwYXRoIGQ9J00xOSA5bDEgMScvPjwvc3ZnPg%3D%3D&logoColor=white
 [Tech-01]: https://img.shields.io/badge/-%F0%9D%9F%8F-111111?style=flat
 [Tech-01-Text]: https://img.shields.io/badge/-Extends%20a%20strategic%20management%20instrument%20with%20Hybrid%20Intelligence%20beyond%20domain%20specific%20decision%20contexts-F5F5F7?style=flat
 [Tech-02]: https://img.shields.io/badge/-%F0%9D%9F%90-111111?style=flat
