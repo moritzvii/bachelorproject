@@ -26,6 +26,7 @@
       </ul>
     </li>
     <li><a href="#workflow-screenshots">Workflow screenshots</a></li>
+    <li><a href="#injecting-the-hybrid-intelligence-into-the-ge-mckinsey-matrix">Injecting the hybrid intelligence into the GE-McKinsey matrix</a></li>
     <li><a href="#frontend">Frontend</a></li>
     <li><a href="#backend">Backend</a></li>
     <li><a href="#additional-docs">Additional docs</a></li>
@@ -123,6 +124,61 @@ Review strategic insights and the evidence foundation behind the recommendation.
 Source document viewer for evidence traceability and report inspection.
 
 ![Source Document Viewer](frontend/public/screenshots/6.png)
+
+## Injecting the hybrid intelligence into the GE-McKinsey matrix
+
+![Syringe icon][Syringe-icon]
+
+![Figure 10 - Derivation of uncertainty intervals](frontend/public/screenshots/hybrid-ge-mckinsey-matrix.png)
+
+### Scoring Logic (Implementation of the Architecture Principles)
+
+The following part is intentionally reduced to the conceptual structure and core stages. Detailed technical implementation and parameterization are documented in the project folder.
+
+1. **Preprocessing**  
+   The evidence base (for example forecast and risk reports in PDF format) is extracted, cleaned, split into chunks, and indexed as embeddings in a vector database together with source-related metadata. If needed, a language model converts content from charts or tables into NLI-compatible premises.
+
+2. **Hypothesis generation**  
+   Strategic plans are transformed into declarative, NLI-compatible hypotheses. This enables consistent semantic matching with the vector database and NLI models.
+
+3. **Information retrieval for candidate generation**  
+   The evidence base is reduced to relevant candidates. Relevance is determined with vector-based cosine similarity on L2-normalized representations.
+
+4. **NLI-based pair scoring**  
+   Relevant evidence candidates are evaluated pairwise against the strategic hypothesis (support, contradiction, neutral). The resulting softmax scores quantify the strength of the semantic relation.
+
+5. **Model-based evaluation (AI baseline)**  
+   For each dimension (forecast and risk, analogously), the mean and population variance of included evidence are aggregated.
+
+   Let `S_F = {s_1, ..., s_n}` be the set of included forecast evidence scores with `s_i in [0,1]`.
+
+   ![Equation 0 - Mean and variance][Eq-0]
+
+   Based on `mu_F`, `sigma_F^2`, and `n`, a normal-approximation uncertainty interval (`z = 1.96`) is computed and bounded to `[0,1]`:
+
+   ![Equation 1 - Uncertainty interval][Eq-1]
+
+6. **Hybrid score fusion**  
+   The alignment slider `a_F in [0,1]` shifts the AI baseline score:
+
+   ![Equation 2 - Alignment difference][Eq-2]
+
+   ![Equation 3 - Hybrid mean score][Eq-3]
+
+   The stability slider `c_F in [0,1]` scales the interval width:
+
+   ![Equation 4 - Hybrid interval width][Eq-4]
+
+   ![Equation 5 - Hybrid interval][Eq-5]
+
+   The output of this stage is the hybrid mean score `mu_F*` and the hybrid interval `[L_F*, U_F*]`, both constrained to `[0,1]`.
+
+7. **Strategy derivation via area shares**  
+   The interval zones are placed as a rectangle in the GE-McKinsey matrix. For each cell `(r,c)`, overlap area is calculated relative to the total overlap:
+
+   ![Equation 6 - Area share per matrix cell][Eq-6]
+
+   The final output is a percentage-based **Strategy Distribution** across all matrix cells.
 
 ## Frontend
 
@@ -388,6 +444,14 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [ShadcnUi-url]: https://ui.shadcn.com/
 [ShadcnIo-badge]: https://img.shields.io/badge/Component%20Library-shadcn.io-000000?style=for-the-badge&labelColor=FFFFFF
 [ShadcnIo-url]: https://www.shadcn.io/
+[Syringe-icon]: https://img.shields.io/static/v1?label=&message=&color=111111&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc%2BPHBhdGggZD0nTTE0IDRsNiA2Jy8%2BPHBhdGggZD0nTTE3IDJsNCA0Jy8%2BPHBhdGggZD0nTTMgMjFsNC0xIDExLTExLTMtM0w0IDE3IDMgMjF6Jy8%2BPHBhdGggZD0nTTEwIDEwbDQgNCcvPjxwYXRoIGQ9J00xOSA5bDEgMScvPjwvc3ZnPg%3D%3D&logoColor=white
+[Eq-0]: frontend/public/equations/latex-equation%20%280%29.svg
+[Eq-1]: frontend/public/equations/latex-equation%20%281%29.svg
+[Eq-2]: frontend/public/equations/latex-equation%20%282%29.svg
+[Eq-3]: frontend/public/equations/latex-equation%20%283%29.svg
+[Eq-4]: frontend/public/equations/latex-equation%20%284%29.svg
+[Eq-5]: frontend/public/equations/latex-equation%20%285%29.svg
+[Eq-6]: frontend/public/equations/latex-equation%20%286%29.svg
 [Tech-01]: https://img.shields.io/badge/-%F0%9D%9F%8F-111111?style=flat
 [Tech-01-Text]: https://img.shields.io/badge/-Extends%20a%20strategic%20management%20instrument%20with%20Hybrid%20Intelligence%20beyond%20domain%20specific%20decision%20contexts-F5F5F7?style=flat
 [Tech-02]: https://img.shields.io/badge/-%F0%9D%9F%90-111111?style=flat
