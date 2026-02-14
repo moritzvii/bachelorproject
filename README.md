@@ -152,31 +152,52 @@ The following part is intentionally reduced to the conceptual structure and core
 
    Let `S_F = {s_1, ..., s_n}` be the set of included forecast evidence scores with `s_i in [0,1]`.
 
-   ![Equation 0 - Mean and variance][Eq-0]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%280%29.svg">
+     <img alt="Equation 0 - Mean and variance" src="frontend/public/equations/latex-equation-light-0.svg">
+   </picture>
 
    Based on `mu_F`, `sigma_F^2`, and `n`, a normal-approximation uncertainty interval (`z = 1.96`) is computed and bounded to `[0,1]`:
 
-   ![Equation 1 - Uncertainty interval][Eq-1]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%281%29.svg">
+     <img alt="Equation 1 - Uncertainty interval" src="frontend/public/equations/latex-equation-light-1.svg">
+   </picture>
 
 6. **Hybrid score fusion**  
    The alignment slider `a_F in [0,1]` shifts the AI baseline score:
 
-   ![Equation 2 - Alignment difference][Eq-2]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%282%29.svg">
+     <img alt="Equation 2 - Alignment difference" src="frontend/public/equations/latex-equation-light-2.svg">
+   </picture>
 
-   ![Equation 3 - Hybrid mean score][Eq-3]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%283%29.svg">
+     <img alt="Equation 3 - Hybrid mean score" src="frontend/public/equations/latex-equation-light-3.svg">
+   </picture>
 
    The stability slider `c_F in [0,1]` scales the interval width:
 
-   ![Equation 4 - Hybrid interval width][Eq-4]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%284%29.svg">
+     <img alt="Equation 4 - Hybrid interval width" src="frontend/public/equations/latex-equation-light-4.svg">
+   </picture>
 
-   ![Equation 5 - Hybrid interval][Eq-5]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%285%29.svg">
+     <img alt="Equation 5 - Hybrid interval" src="frontend/public/equations/latex-equation-light-5.svg">
+   </picture>
 
    The output of this stage is the hybrid mean score `mu_F*` and the hybrid interval `[L_F*, U_F*]`, both constrained to `[0,1]`.
 
 7. **Strategy derivation via area shares**  
    The interval zones are placed as a rectangle in the GE-McKinsey matrix. For each cell `(r,c)`, overlap area is calculated relative to the total overlap:
 
-   ![Equation 6 - Area share per matrix cell][Eq-6]
+   <picture>
+     <source media="(prefers-color-scheme: dark)" srcset="frontend/public/equations/latex-equation%20%286%29.svg">
+     <img alt="Equation 6 - Area share per matrix cell" src="frontend/public/equations/latex-equation-light-6.svg">
+   </picture>
 
    The final output is a percentage-based **Strategy Distribution** across all matrix cells.
 
@@ -445,13 +466,6 @@ curl http://127.0.0.1:8000/hybrid/pipeline/status
 [ShadcnIo-badge]: https://img.shields.io/badge/Component%20Library-shadcn.io-000000?style=for-the-badge&labelColor=FFFFFF
 [ShadcnIo-url]: https://www.shadcn.io/
 [Syringe-icon]: https://img.shields.io/static/v1?label=&message=&color=111111&style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNCAyNCcgZmlsbD0nbm9uZScgc3Ryb2tlPScjZmZmJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCc%2BPHBhdGggZD0nTTE0IDRsNiA2Jy8%2BPHBhdGggZD0nTTE3IDJsNCA0Jy8%2BPHBhdGggZD0nTTMgMjFsNC0xIDExLTExLTMtM0w0IDE3IDMgMjF6Jy8%2BPHBhdGggZD0nTTEwIDEwbDQgNCcvPjxwYXRoIGQ9J00xOSA5bDEgMScvPjwvc3ZnPg%3D%3D&logoColor=white
-[Eq-0]: frontend/public/equations/latex-equation%20%280%29.svg
-[Eq-1]: frontend/public/equations/latex-equation%20%281%29.svg
-[Eq-2]: frontend/public/equations/latex-equation%20%282%29.svg
-[Eq-3]: frontend/public/equations/latex-equation%20%283%29.svg
-[Eq-4]: frontend/public/equations/latex-equation%20%284%29.svg
-[Eq-5]: frontend/public/equations/latex-equation%20%285%29.svg
-[Eq-6]: frontend/public/equations/latex-equation%20%286%29.svg
 [Tech-01]: https://img.shields.io/badge/-%F0%9D%9F%8F-111111?style=flat
 [Tech-01-Text]: https://img.shields.io/badge/-Extends%20a%20strategic%20management%20instrument%20with%20Hybrid%20Intelligence%20beyond%20domain%20specific%20decision%20contexts-F5F5F7?style=flat
 [Tech-02]: https://img.shields.io/badge/-%F0%9D%9F%90-111111?style=flat
